@@ -19,5 +19,6 @@ from password_creator import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home)
+    path('', views.home),
+    path('passwordet', views.password, name='password'),
 ]

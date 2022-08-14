@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Home page</title>
+</head>
+
+<body>
+    <p>Home page</p>
+    <form action="{% url 'password' %}">
+        <p>Password length</p>
+        <select name="length" id="">
+            <option value="6">
+                6
+            </option>
+            <option value="8">
+                8
+            </option>
+            <option value="10">
+                10
+            </option>
+            <option value="12" selected="selected">
+                12
+            </option>
+        </select>
+        <p>Uppercase</p>
+        <input type="checkbox" name="uppercase">
+        <p>Numbers</p>
+        <input type="checkbox" name="numbers">
+        <p>Symbols</p>
+        <input type="checkbox" name="symbols">
+        <input type="submit" value="Generate">
+    </form>
+</body>
+
+</html>
