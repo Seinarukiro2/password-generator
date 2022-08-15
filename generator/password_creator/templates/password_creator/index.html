@@ -1,37 +1,56 @@
+{% load static %}
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Home page</title>
 </head>
 
 <body>
-    <p>Home page</p>
-    <form action="{% url 'password' %}">
-        <p>Password length</p>
-        <select name="length" id="">
-            <option value="6">
-                6
-            </option>
-            <option value="8">
-                8
-            </option>
-            <option value="10">
-                10
-            </option>
-            <option value="12" selected="selected">
-                12
-            </option>
-        </select>
-        <p>Uppercase</p>
-        <input type="checkbox" name="uppercase">
-        <p>Numbers</p>
-        <input type="checkbox" name="numbers">
-        <p>Symbols</p>
-        <input type="checkbox" name="symbols">
-        <input type="submit" value="Generate">
-    </form>
+
+
+
+
+    <div class="content">
+        <p class="head-name">Password generator</p>
+        <div class="container">
+            <form action="{% url 'password' %}">
+                <div class="line">
+                    <p>Password length</p>
+                    <select name="length" class="select">
+                <option value="6">
+                    6
+                </option>
+                <option value="8">
+                    8
+                </option>
+                <option value="10">
+                    10
+                </option>
+                <option value="12" selected="selected">
+                    12
+                </option>
+            </select>
+                </div>
+                <div class="line">
+                    <p>Uppercase</p>
+                    <input type="checkbox" name="uppercase" class="check">
+                </div>
+                <div class="line">
+                    <p>Numbers</p>
+                    <input type="checkbox" name="numbers" class="check">
+                </div>
+                <div class="line">
+                    <p>Symbols</p>
+                    <input type="checkbox" name="symbols" class="check">
+                </div>
+                <div class="button-div">
+                    <input type="submit" value="Generate" class="generate">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

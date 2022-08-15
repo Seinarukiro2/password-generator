@@ -20,8 +20,10 @@ def password(request):
 
     if request.GET.get('numbers'):
         characters.extend(list('1234567890'))
-        
+
     yourPassword = ''
     for i in range(length):
         yourPassword += random.choice(characters)
     return render(request, 'password_creator/password.html', {'password': yourPassword})
+
+
